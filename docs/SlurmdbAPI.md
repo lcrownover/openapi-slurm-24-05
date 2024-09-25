@@ -58,7 +58,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -126,7 +126,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -224,7 +224,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -322,7 +322,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -410,7 +410,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -478,7 +478,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -546,7 +546,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -614,7 +614,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -688,7 +688,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -762,7 +762,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -860,7 +860,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -958,7 +958,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1046,7 +1046,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1110,7 +1110,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1169,7 +1169,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1228,7 +1228,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1306,7 +1306,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1386,7 +1386,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1454,7 +1454,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1584,7 +1584,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1658,7 +1658,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1728,7 +1728,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1787,7 +1787,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1863,7 +1863,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -1941,7 +1941,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2009,7 +2009,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2091,7 +2091,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2155,7 +2155,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2219,7 +2219,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2283,7 +2283,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2349,7 +2349,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2413,7 +2413,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2489,7 +2489,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2553,7 +2553,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2617,7 +2617,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {
@@ -2685,7 +2685,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/lcrownover/openapi-slurm-24-05/openapi"
+	openapiclient "github.com/lcrownover/openapi-slurm-24-05"
 )
 
 func main() {

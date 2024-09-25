@@ -692,4 +692,6 @@ model_v0_0_41_openapi_tres_resp.go
 model_v0_0_41_openapi_users_resp.go
 model_v0_0_41_openapi_wckey_resp.go
 response.go
+test/api_slurm_test.go
+test/api_slurmdb_test.go
 utils.go

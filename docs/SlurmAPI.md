@@ -4,32 +4,33 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SlurmV0040DeleteJob**](SlurmAPI.md#SlurmV0040DeleteJob) | **Delete** /slurm/v0.0.40/job/{job_id} | cancel or signal job
-[**SlurmV0040DeleteJobs**](SlurmAPI.md#SlurmV0040DeleteJobs) | **Delete** /slurm/v0.0.40/jobs/ | send signal to list of jobs
-[**SlurmV0040DeleteNode**](SlurmAPI.md#SlurmV0040DeleteNode) | **Delete** /slurm/v0.0.40/node/{node_name} | delete node
-[**SlurmV0040GetDiag**](SlurmAPI.md#SlurmV0040GetDiag) | **Get** /slurm/v0.0.40/diag/ | get diagnostics
-[**SlurmV0040GetJob**](SlurmAPI.md#SlurmV0040GetJob) | **Get** /slurm/v0.0.40/job/{job_id} | get job info
-[**SlurmV0040GetJobs**](SlurmAPI.md#SlurmV0040GetJobs) | **Get** /slurm/v0.0.40/jobs/ | get list of jobs
-[**SlurmV0040GetJobsState**](SlurmAPI.md#SlurmV0040GetJobsState) | **Get** /slurm/v0.0.40/jobs/state/ | get list of job states
-[**SlurmV0040GetLicenses**](SlurmAPI.md#SlurmV0040GetLicenses) | **Get** /slurm/v0.0.40/licenses/ | get all Slurm tracked license info
-[**SlurmV0040GetNode**](SlurmAPI.md#SlurmV0040GetNode) | **Get** /slurm/v0.0.40/node/{node_name} | get node info
-[**SlurmV0040GetNodes**](SlurmAPI.md#SlurmV0040GetNodes) | **Get** /slurm/v0.0.40/nodes/ | get node(s) info
-[**SlurmV0040GetPartition**](SlurmAPI.md#SlurmV0040GetPartition) | **Get** /slurm/v0.0.40/partition/{partition_name} | get partition info
-[**SlurmV0040GetPartitions**](SlurmAPI.md#SlurmV0040GetPartitions) | **Get** /slurm/v0.0.40/partitions/ | get all partition info
-[**SlurmV0040GetPing**](SlurmAPI.md#SlurmV0040GetPing) | **Get** /slurm/v0.0.40/ping/ | ping test
-[**SlurmV0040GetReconfigure**](SlurmAPI.md#SlurmV0040GetReconfigure) | **Get** /slurm/v0.0.40/reconfigure/ | request slurmctld reconfigure
-[**SlurmV0040GetReservation**](SlurmAPI.md#SlurmV0040GetReservation) | **Get** /slurm/v0.0.40/reservation/{reservation_name} | get reservation info
-[**SlurmV0040GetReservations**](SlurmAPI.md#SlurmV0040GetReservations) | **Get** /slurm/v0.0.40/reservations/ | get all reservation info
-[**SlurmV0040GetShares**](SlurmAPI.md#SlurmV0040GetShares) | **Get** /slurm/v0.0.40/shares | get fairshare info
-[**SlurmV0040PostJob**](SlurmAPI.md#SlurmV0040PostJob) | **Post** /slurm/v0.0.40/job/{job_id} | update job
-[**SlurmV0040PostJobSubmit**](SlurmAPI.md#SlurmV0040PostJobSubmit) | **Post** /slurm/v0.0.40/job/submit | submit new job
-[**SlurmV0040PostNode**](SlurmAPI.md#SlurmV0040PostNode) | **Post** /slurm/v0.0.40/node/{node_name} | update node properties
+[**SlurmV0041DeleteJob**](SlurmAPI.md#SlurmV0041DeleteJob) | **Delete** /slurm/v0.0.41/job/{job_id} | cancel or signal job
+[**SlurmV0041DeleteJobs**](SlurmAPI.md#SlurmV0041DeleteJobs) | **Delete** /slurm/v0.0.41/jobs/ | send signal to list of jobs
+[**SlurmV0041DeleteNode**](SlurmAPI.md#SlurmV0041DeleteNode) | **Delete** /slurm/v0.0.41/node/{node_name} | delete node
+[**SlurmV0041GetDiag**](SlurmAPI.md#SlurmV0041GetDiag) | **Get** /slurm/v0.0.41/diag/ | get diagnostics
+[**SlurmV0041GetJob**](SlurmAPI.md#SlurmV0041GetJob) | **Get** /slurm/v0.0.41/job/{job_id} | get job info
+[**SlurmV0041GetJobs**](SlurmAPI.md#SlurmV0041GetJobs) | **Get** /slurm/v0.0.41/jobs/ | get list of jobs
+[**SlurmV0041GetJobsState**](SlurmAPI.md#SlurmV0041GetJobsState) | **Get** /slurm/v0.0.41/jobs/state/ | get list of job states
+[**SlurmV0041GetLicenses**](SlurmAPI.md#SlurmV0041GetLicenses) | **Get** /slurm/v0.0.41/licenses/ | get all Slurm tracked license info
+[**SlurmV0041GetNode**](SlurmAPI.md#SlurmV0041GetNode) | **Get** /slurm/v0.0.41/node/{node_name} | get node info
+[**SlurmV0041GetNodes**](SlurmAPI.md#SlurmV0041GetNodes) | **Get** /slurm/v0.0.41/nodes/ | get node(s) info
+[**SlurmV0041GetPartition**](SlurmAPI.md#SlurmV0041GetPartition) | **Get** /slurm/v0.0.41/partition/{partition_name} | get partition info
+[**SlurmV0041GetPartitions**](SlurmAPI.md#SlurmV0041GetPartitions) | **Get** /slurm/v0.0.41/partitions/ | get all partition info
+[**SlurmV0041GetPing**](SlurmAPI.md#SlurmV0041GetPing) | **Get** /slurm/v0.0.41/ping/ | ping test
+[**SlurmV0041GetReconfigure**](SlurmAPI.md#SlurmV0041GetReconfigure) | **Get** /slurm/v0.0.41/reconfigure/ | request slurmctld reconfigure
+[**SlurmV0041GetReservation**](SlurmAPI.md#SlurmV0041GetReservation) | **Get** /slurm/v0.0.41/reservation/{reservation_name} | get reservation info
+[**SlurmV0041GetReservations**](SlurmAPI.md#SlurmV0041GetReservations) | **Get** /slurm/v0.0.41/reservations/ | get all reservation info
+[**SlurmV0041GetShares**](SlurmAPI.md#SlurmV0041GetShares) | **Get** /slurm/v0.0.41/shares | get fairshare info
+[**SlurmV0041PostJob**](SlurmAPI.md#SlurmV0041PostJob) | **Post** /slurm/v0.0.41/job/{job_id} | update job
+[**SlurmV0041PostJobAllocate**](SlurmAPI.md#SlurmV0041PostJobAllocate) | **Post** /slurm/v0.0.41/job/allocate | submit new job allocation without any steps that must be signaled to stop
+[**SlurmV0041PostJobSubmit**](SlurmAPI.md#SlurmV0041PostJobSubmit) | **Post** /slurm/v0.0.41/job/submit | submit new job
+[**SlurmV0041PostNode**](SlurmAPI.md#SlurmV0041PostNode) | **Post** /slurm/v0.0.41/node/{node_name} | update node properties
 
 
 
-## SlurmV0040DeleteJob
+## SlurmV0041DeleteJob
 
-> V0040OpenapiResp SlurmV0040DeleteJob(ctx, jobId).Signal(signal).Flags(flags).Execute()
+> V0041OpenapiResp SlurmV0041DeleteJob(ctx, jobId).Signal(signal).Flags(flags).Execute()
 
 cancel or signal job
 
@@ -52,13 +53,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040DeleteJob(context.Background(), jobId).Signal(signal).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041DeleteJob(context.Background(), jobId).Signal(signal).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040DeleteJob``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041DeleteJob``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040DeleteJob`: V0040OpenapiResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040DeleteJob`: %v\n", resp)
+	// response from `SlurmV0041DeleteJob`: V0041OpenapiResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041DeleteJob`: %v\n", resp)
 }
 ```
 
@@ -72,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040DeleteJobRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041DeleteJobRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -83,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiResp**](V0040OpenapiResp.md)
+[**V0041OpenapiResp**](V0041OpenapiResp.md)
 
 ### Authorization
 
@@ -99,9 +100,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040DeleteJobs
+## SlurmV0041DeleteJobs
 
-> V0040OpenapiKillJobsResp SlurmV0040DeleteJobs(ctx).V0040KillJobsMsg(v0040KillJobsMsg).Execute()
+> SlurmV0041DeleteJobs200Response SlurmV0041DeleteJobs(ctx).SlurmV0041DeleteJobsRequest(slurmV0041DeleteJobsRequest).Execute()
 
 send signal to list of jobs
 
@@ -118,17 +119,17 @@ import (
 )
 
 func main() {
-	v0040KillJobsMsg := *openapiclient.NewV0040KillJobsMsg() // V0040KillJobsMsg | Signal or cancel jobs (optional)
+	slurmV0041DeleteJobsRequest := *openapiclient.NewSlurmV0041DeleteJobsRequest() // SlurmV0041DeleteJobsRequest | Signal or cancel jobs (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040DeleteJobs(context.Background()).V0040KillJobsMsg(v0040KillJobsMsg).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041DeleteJobs(context.Background()).SlurmV0041DeleteJobsRequest(slurmV0041DeleteJobsRequest).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040DeleteJobs``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041DeleteJobs``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040DeleteJobs`: V0040OpenapiKillJobsResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040DeleteJobs`: %v\n", resp)
+	// response from `SlurmV0041DeleteJobs`: SlurmV0041DeleteJobs200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041DeleteJobs`: %v\n", resp)
 }
 ```
 
@@ -138,16 +139,16 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040DeleteJobsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041DeleteJobsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v0040KillJobsMsg** | [**V0040KillJobsMsg**](V0040KillJobsMsg.md) | Signal or cancel jobs | 
+ **slurmV0041DeleteJobsRequest** | [**SlurmV0041DeleteJobsRequest**](SlurmV0041DeleteJobsRequest.md) | Signal or cancel jobs | 
 
 ### Return type
 
-[**V0040OpenapiKillJobsResp**](V0040OpenapiKillJobsResp.md)
+[**SlurmV0041DeleteJobs200Response**](SlurmV0041DeleteJobs200Response.md)
 
 ### Authorization
 
@@ -163,9 +164,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040DeleteNode
+## SlurmV0041DeleteNode
 
-> V0040OpenapiResp SlurmV0040DeleteNode(ctx, nodeName).Execute()
+> V0041OpenapiResp SlurmV0041DeleteNode(ctx, nodeName).Execute()
 
 delete node
 
@@ -186,13 +187,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040DeleteNode(context.Background(), nodeName).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041DeleteNode(context.Background(), nodeName).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040DeleteNode``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041DeleteNode``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040DeleteNode`: V0040OpenapiResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040DeleteNode`: %v\n", resp)
+	// response from `SlurmV0041DeleteNode`: V0041OpenapiResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041DeleteNode`: %v\n", resp)
 }
 ```
 
@@ -206,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040DeleteNodeRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041DeleteNodeRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -215,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiResp**](V0040OpenapiResp.md)
+[**V0041OpenapiResp**](V0041OpenapiResp.md)
 
 ### Authorization
 
@@ -231,9 +232,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetDiag
+## SlurmV0041GetDiag
 
-> V0040OpenapiDiagResp SlurmV0040GetDiag(ctx).Execute()
+> SlurmV0041GetDiag200Response SlurmV0041GetDiag(ctx).Execute()
 
 get diagnostics
 
@@ -253,13 +254,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetDiag(context.Background()).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetDiag(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetDiag``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetDiag``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetDiag`: V0040OpenapiDiagResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetDiag`: %v\n", resp)
+	// response from `SlurmV0041GetDiag`: SlurmV0041GetDiag200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetDiag`: %v\n", resp)
 }
 ```
 
@@ -269,12 +270,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetDiagRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetDiagRequest struct via the builder pattern
 
 
 ### Return type
 
-[**V0040OpenapiDiagResp**](V0040OpenapiDiagResp.md)
+[**SlurmV0041GetDiag200Response**](SlurmV0041GetDiag200Response.md)
 
 ### Authorization
 
@@ -290,9 +291,9 @@ Other parameters are passed through a pointer to a apiSlurmV0040GetDiagRequest s
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetJob
+## SlurmV0041GetJob
 
-> V0040OpenapiJobInfoResp SlurmV0040GetJob(ctx, jobId).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiJobInfoResp SlurmV0041GetJob(ctx, jobId).UpdateTime(updateTime).Flags(flags).Execute()
 
 get job info
 
@@ -315,13 +316,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetJob(context.Background(), jobId).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetJob(context.Background(), jobId).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetJob``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetJob``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetJob`: V0040OpenapiJobInfoResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetJob`: %v\n", resp)
+	// response from `SlurmV0041GetJob`: V0041OpenapiJobInfoResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetJob`: %v\n", resp)
 }
 ```
 
@@ -335,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetJobRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetJobRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -346,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiJobInfoResp**](V0040OpenapiJobInfoResp.md)
+[**V0041OpenapiJobInfoResp**](V0041OpenapiJobInfoResp.md)
 
 ### Authorization
 
@@ -362,9 +363,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetJobs
+## SlurmV0041GetJobs
 
-> V0040OpenapiJobInfoResp SlurmV0040GetJobs(ctx).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiJobInfoResp SlurmV0041GetJobs(ctx).UpdateTime(updateTime).Flags(flags).Execute()
 
 get list of jobs
 
@@ -386,13 +387,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetJobs(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetJobs(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetJobs``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetJobs``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetJobs`: V0040OpenapiJobInfoResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetJobs`: %v\n", resp)
+	// response from `SlurmV0041GetJobs`: V0041OpenapiJobInfoResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetJobs`: %v\n", resp)
 }
 ```
 
@@ -402,7 +403,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetJobsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetJobsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -412,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiJobInfoResp**](V0040OpenapiJobInfoResp.md)
+[**V0041OpenapiJobInfoResp**](V0041OpenapiJobInfoResp.md)
 
 ### Authorization
 
@@ -428,9 +429,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetJobsState
+## SlurmV0041GetJobsState
 
-> V0040OpenapiJobInfoResp SlurmV0040GetJobsState(ctx).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiJobInfoResp SlurmV0041GetJobsState(ctx).UpdateTime(updateTime).Flags(flags).Execute()
 
 get list of job states
 
@@ -452,13 +453,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetJobsState(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetJobsState(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetJobsState``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetJobsState``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetJobsState`: V0040OpenapiJobInfoResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetJobsState`: %v\n", resp)
+	// response from `SlurmV0041GetJobsState`: V0041OpenapiJobInfoResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetJobsState`: %v\n", resp)
 }
 ```
 
@@ -468,7 +469,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetJobsStateRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetJobsStateRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -478,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiJobInfoResp**](V0040OpenapiJobInfoResp.md)
+[**V0041OpenapiJobInfoResp**](V0041OpenapiJobInfoResp.md)
 
 ### Authorization
 
@@ -494,9 +495,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetLicenses
+## SlurmV0041GetLicenses
 
-> V0040OpenapiLicensesResp SlurmV0040GetLicenses(ctx).Execute()
+> SlurmV0041GetLicenses200Response SlurmV0041GetLicenses(ctx).Execute()
 
 get all Slurm tracked license info
 
@@ -516,13 +517,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetLicenses(context.Background()).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetLicenses(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetLicenses``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetLicenses``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetLicenses`: V0040OpenapiLicensesResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetLicenses`: %v\n", resp)
+	// response from `SlurmV0041GetLicenses`: SlurmV0041GetLicenses200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetLicenses`: %v\n", resp)
 }
 ```
 
@@ -532,12 +533,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetLicensesRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetLicensesRequest struct via the builder pattern
 
 
 ### Return type
 
-[**V0040OpenapiLicensesResp**](V0040OpenapiLicensesResp.md)
+[**SlurmV0041GetLicenses200Response**](SlurmV0041GetLicenses200Response.md)
 
 ### Authorization
 
@@ -553,9 +554,9 @@ Other parameters are passed through a pointer to a apiSlurmV0040GetLicensesReque
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetNode
+## SlurmV0041GetNode
 
-> V0040OpenapiNodesResp SlurmV0040GetNode(ctx, nodeName).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiNodesResp SlurmV0041GetNode(ctx, nodeName).UpdateTime(updateTime).Flags(flags).Execute()
 
 get node info
 
@@ -578,13 +579,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetNode(context.Background(), nodeName).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetNode(context.Background(), nodeName).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetNode``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetNode``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetNode`: V0040OpenapiNodesResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetNode`: %v\n", resp)
+	// response from `SlurmV0041GetNode`: V0041OpenapiNodesResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetNode`: %v\n", resp)
 }
 ```
 
@@ -598,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetNodeRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetNodeRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -609,7 +610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiNodesResp**](V0040OpenapiNodesResp.md)
+[**V0041OpenapiNodesResp**](V0041OpenapiNodesResp.md)
 
 ### Authorization
 
@@ -625,9 +626,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetNodes
+## SlurmV0041GetNodes
 
-> V0040OpenapiNodesResp SlurmV0040GetNodes(ctx).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiNodesResp SlurmV0041GetNodes(ctx).UpdateTime(updateTime).Flags(flags).Execute()
 
 get node(s) info
 
@@ -649,13 +650,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetNodes(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetNodes(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetNodes``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetNodes``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetNodes`: V0040OpenapiNodesResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetNodes`: %v\n", resp)
+	// response from `SlurmV0041GetNodes`: V0041OpenapiNodesResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetNodes`: %v\n", resp)
 }
 ```
 
@@ -665,7 +666,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetNodesRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetNodesRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -675,7 +676,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiNodesResp**](V0040OpenapiNodesResp.md)
+[**V0041OpenapiNodesResp**](V0041OpenapiNodesResp.md)
 
 ### Authorization
 
@@ -691,9 +692,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetPartition
+## SlurmV0041GetPartition
 
-> V0040OpenapiPartitionResp SlurmV0040GetPartition(ctx, partitionName).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiPartitionResp SlurmV0041GetPartition(ctx, partitionName).UpdateTime(updateTime).Flags(flags).Execute()
 
 get partition info
 
@@ -716,13 +717,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetPartition(context.Background(), partitionName).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetPartition(context.Background(), partitionName).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetPartition``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetPartition``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetPartition`: V0040OpenapiPartitionResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetPartition`: %v\n", resp)
+	// response from `SlurmV0041GetPartition`: V0041OpenapiPartitionResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetPartition`: %v\n", resp)
 }
 ```
 
@@ -736,7 +737,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetPartitionRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetPartitionRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -747,7 +748,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiPartitionResp**](V0040OpenapiPartitionResp.md)
+[**V0041OpenapiPartitionResp**](V0041OpenapiPartitionResp.md)
 
 ### Authorization
 
@@ -763,9 +764,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetPartitions
+## SlurmV0041GetPartitions
 
-> V0040OpenapiPartitionResp SlurmV0040GetPartitions(ctx).UpdateTime(updateTime).Flags(flags).Execute()
+> V0041OpenapiPartitionResp SlurmV0041GetPartitions(ctx).UpdateTime(updateTime).Flags(flags).Execute()
 
 get all partition info
 
@@ -787,13 +788,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetPartitions(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetPartitions(context.Background()).UpdateTime(updateTime).Flags(flags).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetPartitions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetPartitions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetPartitions`: V0040OpenapiPartitionResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetPartitions`: %v\n", resp)
+	// response from `SlurmV0041GetPartitions`: V0041OpenapiPartitionResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetPartitions`: %v\n", resp)
 }
 ```
 
@@ -803,7 +804,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetPartitionsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetPartitionsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -813,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiPartitionResp**](V0040OpenapiPartitionResp.md)
+[**V0041OpenapiPartitionResp**](V0041OpenapiPartitionResp.md)
 
 ### Authorization
 
@@ -829,9 +830,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetPing
+## SlurmV0041GetPing
 
-> V0040OpenapiPingArrayResp SlurmV0040GetPing(ctx).Execute()
+> SlurmV0041GetPing200Response SlurmV0041GetPing(ctx).Execute()
 
 ping test
 
@@ -851,13 +852,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetPing(context.Background()).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetPing(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetPing``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetPing``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetPing`: V0040OpenapiPingArrayResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetPing`: %v\n", resp)
+	// response from `SlurmV0041GetPing`: SlurmV0041GetPing200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetPing`: %v\n", resp)
 }
 ```
 
@@ -867,12 +868,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetPingRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetPingRequest struct via the builder pattern
 
 
 ### Return type
 
-[**V0040OpenapiPingArrayResp**](V0040OpenapiPingArrayResp.md)
+[**SlurmV0041GetPing200Response**](SlurmV0041GetPing200Response.md)
 
 ### Authorization
 
@@ -888,9 +889,9 @@ Other parameters are passed through a pointer to a apiSlurmV0040GetPingRequest s
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetReconfigure
+## SlurmV0041GetReconfigure
 
-> V0040OpenapiResp SlurmV0040GetReconfigure(ctx).Execute()
+> V0041OpenapiResp SlurmV0041GetReconfigure(ctx).Execute()
 
 request slurmctld reconfigure
 
@@ -910,13 +911,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetReconfigure(context.Background()).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetReconfigure(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetReconfigure``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetReconfigure``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetReconfigure`: V0040OpenapiResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetReconfigure`: %v\n", resp)
+	// response from `SlurmV0041GetReconfigure`: V0041OpenapiResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetReconfigure`: %v\n", resp)
 }
 ```
 
@@ -926,12 +927,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetReconfigureRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetReconfigureRequest struct via the builder pattern
 
 
 ### Return type
 
-[**V0040OpenapiResp**](V0040OpenapiResp.md)
+[**V0041OpenapiResp**](V0041OpenapiResp.md)
 
 ### Authorization
 
@@ -947,9 +948,9 @@ Other parameters are passed through a pointer to a apiSlurmV0040GetReconfigureRe
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetReservation
+## SlurmV0041GetReservation
 
-> V0040OpenapiReservationResp SlurmV0040GetReservation(ctx, reservationName).UpdateTime(updateTime).Execute()
+> V0041OpenapiReservationResp SlurmV0041GetReservation(ctx, reservationName).UpdateTime(updateTime).Execute()
 
 get reservation info
 
@@ -971,13 +972,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetReservation(context.Background(), reservationName).UpdateTime(updateTime).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetReservation(context.Background(), reservationName).UpdateTime(updateTime).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetReservation``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetReservation``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetReservation`: V0040OpenapiReservationResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetReservation`: %v\n", resp)
+	// response from `SlurmV0041GetReservation`: V0041OpenapiReservationResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetReservation`: %v\n", resp)
 }
 ```
 
@@ -991,7 +992,7 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetReservationRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetReservationRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1001,7 +1002,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiReservationResp**](V0040OpenapiReservationResp.md)
+[**V0041OpenapiReservationResp**](V0041OpenapiReservationResp.md)
 
 ### Authorization
 
@@ -1017,9 +1018,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetReservations
+## SlurmV0041GetReservations
 
-> V0040OpenapiReservationResp SlurmV0040GetReservations(ctx).UpdateTime(updateTime).Execute()
+> V0041OpenapiReservationResp SlurmV0041GetReservations(ctx).UpdateTime(updateTime).Execute()
 
 get all reservation info
 
@@ -1040,13 +1041,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetReservations(context.Background()).UpdateTime(updateTime).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetReservations(context.Background()).UpdateTime(updateTime).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetReservations``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetReservations``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetReservations`: V0040OpenapiReservationResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetReservations`: %v\n", resp)
+	// response from `SlurmV0041GetReservations`: V0041OpenapiReservationResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetReservations`: %v\n", resp)
 }
 ```
 
@@ -1056,7 +1057,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetReservationsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetReservationsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1065,7 +1066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiReservationResp**](V0040OpenapiReservationResp.md)
+[**V0041OpenapiReservationResp**](V0041OpenapiReservationResp.md)
 
 ### Authorization
 
@@ -1081,9 +1082,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040GetShares
+## SlurmV0041GetShares
 
-> V0040OpenapiSharesResp SlurmV0040GetShares(ctx).Accounts(accounts).Users(users).Execute()
+> SlurmV0041GetShares200Response SlurmV0041GetShares(ctx).Accounts(accounts).Users(users).Execute()
 
 get fairshare info
 
@@ -1105,13 +1106,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040GetShares(context.Background()).Accounts(accounts).Users(users).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041GetShares(context.Background()).Accounts(accounts).Users(users).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040GetShares``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041GetShares``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040GetShares`: V0040OpenapiSharesResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040GetShares`: %v\n", resp)
+	// response from `SlurmV0041GetShares`: SlurmV0041GetShares200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041GetShares`: %v\n", resp)
 }
 ```
 
@@ -1121,7 +1122,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040GetSharesRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041GetSharesRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1131,7 +1132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V0040OpenapiSharesResp**](V0040OpenapiSharesResp.md)
+[**SlurmV0041GetShares200Response**](SlurmV0041GetShares200Response.md)
 
 ### Authorization
 
@@ -1147,9 +1148,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040PostJob
+## SlurmV0041PostJob
 
-> V0040OpenapiJobPostResponse SlurmV0040PostJob(ctx, jobId).V0040JobDescMsg(v0040JobDescMsg).Execute()
+> SlurmV0041PostJob200Response SlurmV0041PostJob(ctx, jobId).SlurmV0041PostJobSubmitRequestJobsInner(slurmV0041PostJobSubmitRequestJobsInner).Execute()
 
 update job
 
@@ -1167,17 +1168,17 @@ import (
 
 func main() {
 	jobId := "jobId_example" // string | Job ID
-	v0040JobDescMsg := *openapiclient.NewV0040JobDescMsg() // V0040JobDescMsg | Job update description (optional)
+	slurmV0041PostJobSubmitRequestJobsInner := *openapiclient.NewSlurmV0041PostJobSubmitRequestJobsInner() // SlurmV0041PostJobSubmitRequestJobsInner | Job update description (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040PostJob(context.Background(), jobId).V0040JobDescMsg(v0040JobDescMsg).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041PostJob(context.Background(), jobId).SlurmV0041PostJobSubmitRequestJobsInner(slurmV0041PostJobSubmitRequestJobsInner).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040PostJob``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041PostJob``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040PostJob`: V0040OpenapiJobPostResponse
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040PostJob`: %v\n", resp)
+	// response from `SlurmV0041PostJob`: SlurmV0041PostJob200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041PostJob`: %v\n", resp)
 }
 ```
 
@@ -1191,17 +1192,17 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040PostJobRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041PostJobRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **v0040JobDescMsg** | [**V0040JobDescMsg**](V0040JobDescMsg.md) | Job update description | 
+ **slurmV0041PostJobSubmitRequestJobsInner** | [**SlurmV0041PostJobSubmitRequestJobsInner**](SlurmV0041PostJobSubmitRequestJobsInner.md) | Job update description | 
 
 ### Return type
 
-[**V0040OpenapiJobPostResponse**](V0040OpenapiJobPostResponse.md)
+[**SlurmV0041PostJob200Response**](SlurmV0041PostJob200Response.md)
 
 ### Authorization
 
@@ -1217,9 +1218,73 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040PostJobSubmit
+## SlurmV0041PostJobAllocate
 
-> V0040OpenapiJobSubmitResponse SlurmV0040PostJobSubmit(ctx).V0040JobSubmitReq(v0040JobSubmitReq).Execute()
+> SlurmV0041PostJobAllocate200Response SlurmV0041PostJobAllocate(ctx).SlurmV0041PostJobAllocateRequest(slurmV0041PostJobAllocateRequest).Execute()
+
+submit new job allocation without any steps that must be signaled to stop
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+	slurmV0041PostJobAllocateRequest := *openapiclient.NewSlurmV0041PostJobAllocateRequest() // SlurmV0041PostJobAllocateRequest | Job allocation description (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041PostJobAllocate(context.Background()).SlurmV0041PostJobAllocateRequest(slurmV0041PostJobAllocateRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041PostJobAllocate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SlurmV0041PostJobAllocate`: SlurmV0041PostJobAllocate200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041PostJobAllocate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSlurmV0041PostJobAllocateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slurmV0041PostJobAllocateRequest** | [**SlurmV0041PostJobAllocateRequest**](SlurmV0041PostJobAllocateRequest.md) | Job allocation description | 
+
+### Return type
+
+[**SlurmV0041PostJobAllocate200Response**](SlurmV0041PostJobAllocate200Response.md)
+
+### Authorization
+
+[user](../README.md#user), [bearerAuth](../README.md#bearerAuth), [token](../README.md#token)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SlurmV0041PostJobSubmit
+
+> SlurmV0041PostJobSubmit200Response SlurmV0041PostJobSubmit(ctx).SlurmV0041PostJobSubmitRequest(slurmV0041PostJobSubmitRequest).Execute()
 
 submit new job
 
@@ -1236,17 +1301,17 @@ import (
 )
 
 func main() {
-	v0040JobSubmitReq := *openapiclient.NewV0040JobSubmitReq() // V0040JobSubmitReq | Job description (optional)
+	slurmV0041PostJobSubmitRequest := *openapiclient.NewSlurmV0041PostJobSubmitRequest() // SlurmV0041PostJobSubmitRequest | Job description (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040PostJobSubmit(context.Background()).V0040JobSubmitReq(v0040JobSubmitReq).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041PostJobSubmit(context.Background()).SlurmV0041PostJobSubmitRequest(slurmV0041PostJobSubmitRequest).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040PostJobSubmit``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041PostJobSubmit``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040PostJobSubmit`: V0040OpenapiJobSubmitResponse
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040PostJobSubmit`: %v\n", resp)
+	// response from `SlurmV0041PostJobSubmit`: SlurmV0041PostJobSubmit200Response
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041PostJobSubmit`: %v\n", resp)
 }
 ```
 
@@ -1256,16 +1321,16 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040PostJobSubmitRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041PostJobSubmitRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v0040JobSubmitReq** | [**V0040JobSubmitReq**](V0040JobSubmitReq.md) | Job description | 
+ **slurmV0041PostJobSubmitRequest** | [**SlurmV0041PostJobSubmitRequest**](SlurmV0041PostJobSubmitRequest.md) | Job description | 
 
 ### Return type
 
-[**V0040OpenapiJobSubmitResponse**](V0040OpenapiJobSubmitResponse.md)
+[**SlurmV0041PostJobSubmit200Response**](SlurmV0041PostJobSubmit200Response.md)
 
 ### Authorization
 
@@ -1281,9 +1346,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## SlurmV0040PostNode
+## SlurmV0041PostNode
 
-> V0040OpenapiResp SlurmV0040PostNode(ctx, nodeName).V0040UpdateNodeMsg(v0040UpdateNodeMsg).Execute()
+> V0041OpenapiResp SlurmV0041PostNode(ctx, nodeName).SlurmV0041PostNodeRequest(slurmV0041PostNodeRequest).Execute()
 
 update node properties
 
@@ -1301,17 +1366,17 @@ import (
 
 func main() {
 	nodeName := "nodeName_example" // string | Node name
-	v0040UpdateNodeMsg := *openapiclient.NewV0040UpdateNodeMsg() // V0040UpdateNodeMsg | Node update description (optional)
+	slurmV0041PostNodeRequest := *openapiclient.NewSlurmV0041PostNodeRequest() // SlurmV0041PostNodeRequest | Node update description (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SlurmAPI.SlurmV0040PostNode(context.Background(), nodeName).V0040UpdateNodeMsg(v0040UpdateNodeMsg).Execute()
+	resp, r, err := apiClient.SlurmAPI.SlurmV0041PostNode(context.Background(), nodeName).SlurmV0041PostNodeRequest(slurmV0041PostNodeRequest).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0040PostNode``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SlurmAPI.SlurmV0041PostNode``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SlurmV0040PostNode`: V0040OpenapiResp
-	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0040PostNode`: %v\n", resp)
+	// response from `SlurmV0041PostNode`: V0041OpenapiResp
+	fmt.Fprintf(os.Stdout, "Response from `SlurmAPI.SlurmV0041PostNode`: %v\n", resp)
 }
 ```
 
@@ -1325,17 +1390,17 @@ Name | Type | Description  | Notes
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSlurmV0040PostNodeRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSlurmV0041PostNodeRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **v0040UpdateNodeMsg** | [**V0040UpdateNodeMsg**](V0040UpdateNodeMsg.md) | Node update description | 
+ **slurmV0041PostNodeRequest** | [**SlurmV0041PostNodeRequest**](SlurmV0041PostNodeRequest.md) | Node update description | 
 
 ### Return type
 
-[**V0040OpenapiResp**](V0040OpenapiResp.md)
+[**V0041OpenapiResp**](V0041OpenapiResp.md)
 
 ### Authorization
 

@@ -24,7 +24,7 @@ import (
 // SlurmAPIService SlurmAPI service
 type SlurmAPIService service
 
-type ApiSlurmV0040DeleteJobRequest struct {
+type ApiSlurmV0041DeleteJobRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	jobId string
@@ -33,30 +33,30 @@ type ApiSlurmV0040DeleteJobRequest struct {
 }
 
 // Signal to send to Job
-func (r ApiSlurmV0040DeleteJobRequest) Signal(signal string) ApiSlurmV0040DeleteJobRequest {
+func (r ApiSlurmV0041DeleteJobRequest) Signal(signal string) ApiSlurmV0041DeleteJobRequest {
 	r.signal = &signal
 	return r
 }
 
 // Signalling flags
-func (r ApiSlurmV0040DeleteJobRequest) Flags(flags string) ApiSlurmV0040DeleteJobRequest {
+func (r ApiSlurmV0041DeleteJobRequest) Flags(flags string) ApiSlurmV0041DeleteJobRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040DeleteJobRequest) Execute() (*V0040OpenapiResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040DeleteJobExecute(r)
+func (r ApiSlurmV0041DeleteJobRequest) Execute() (*V0041OpenapiResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041DeleteJobExecute(r)
 }
 
 /*
-SlurmV0040DeleteJob cancel or signal job
+SlurmV0041DeleteJob cancel or signal job
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param jobId Job ID
- @return ApiSlurmV0040DeleteJobRequest
+ @return ApiSlurmV0041DeleteJobRequest
 */
-func (a *SlurmAPIService) SlurmV0040DeleteJob(ctx context.Context, jobId string) ApiSlurmV0040DeleteJobRequest {
-	return ApiSlurmV0040DeleteJobRequest{
+func (a *SlurmAPIService) SlurmV0041DeleteJob(ctx context.Context, jobId string) ApiSlurmV0041DeleteJobRequest {
+	return ApiSlurmV0041DeleteJobRequest{
 		ApiService: a,
 		ctx: ctx,
 		jobId: jobId,
@@ -64,21 +64,21 @@ func (a *SlurmAPIService) SlurmV0040DeleteJob(ctx context.Context, jobId string)
 }
 
 // Execute executes the request
-//  @return V0040OpenapiResp
-func (a *SlurmAPIService) SlurmV0040DeleteJobExecute(r ApiSlurmV0040DeleteJobRequest) (*V0040OpenapiResp, *http.Response, error) {
+//  @return V0041OpenapiResp
+func (a *SlurmAPIService) SlurmV0041DeleteJobExecute(r ApiSlurmV0041DeleteJobRequest) (*V0041OpenapiResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiResp
+		localVarReturnValue  *V0041OpenapiResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040DeleteJob")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041DeleteJob")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/job/{job_id}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/job/{job_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"job_id"+"}", url.PathEscape(parameterValueToString(r.jobId, "jobId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -158,7 +158,7 @@ func (a *SlurmAPIService) SlurmV0040DeleteJobExecute(r ApiSlurmV0040DeleteJobReq
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiResp
+			var v V0041OpenapiResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -181,51 +181,51 @@ func (a *SlurmAPIService) SlurmV0040DeleteJobExecute(r ApiSlurmV0040DeleteJobReq
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040DeleteJobsRequest struct {
+type ApiSlurmV0041DeleteJobsRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
-	v0040KillJobsMsg *V0040KillJobsMsg
+	slurmV0041DeleteJobsRequest *SlurmV0041DeleteJobsRequest
 }
 
 // Signal or cancel jobs
-func (r ApiSlurmV0040DeleteJobsRequest) V0040KillJobsMsg(v0040KillJobsMsg V0040KillJobsMsg) ApiSlurmV0040DeleteJobsRequest {
-	r.v0040KillJobsMsg = &v0040KillJobsMsg
+func (r ApiSlurmV0041DeleteJobsRequest) SlurmV0041DeleteJobsRequest(slurmV0041DeleteJobsRequest SlurmV0041DeleteJobsRequest) ApiSlurmV0041DeleteJobsRequest {
+	r.slurmV0041DeleteJobsRequest = &slurmV0041DeleteJobsRequest
 	return r
 }
 
-func (r ApiSlurmV0040DeleteJobsRequest) Execute() (*V0040OpenapiKillJobsResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040DeleteJobsExecute(r)
+func (r ApiSlurmV0041DeleteJobsRequest) Execute() (*SlurmV0041DeleteJobs200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041DeleteJobsExecute(r)
 }
 
 /*
-SlurmV0040DeleteJobs send signal to list of jobs
+SlurmV0041DeleteJobs send signal to list of jobs
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040DeleteJobsRequest
+ @return ApiSlurmV0041DeleteJobsRequest
 */
-func (a *SlurmAPIService) SlurmV0040DeleteJobs(ctx context.Context) ApiSlurmV0040DeleteJobsRequest {
-	return ApiSlurmV0040DeleteJobsRequest{
+func (a *SlurmAPIService) SlurmV0041DeleteJobs(ctx context.Context) ApiSlurmV0041DeleteJobsRequest {
+	return ApiSlurmV0041DeleteJobsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiKillJobsResp
-func (a *SlurmAPIService) SlurmV0040DeleteJobsExecute(r ApiSlurmV0040DeleteJobsRequest) (*V0040OpenapiKillJobsResp, *http.Response, error) {
+//  @return SlurmV0041DeleteJobs200Response
+func (a *SlurmAPIService) SlurmV0041DeleteJobsExecute(r ApiSlurmV0041DeleteJobsRequest) (*SlurmV0041DeleteJobs200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiKillJobsResp
+		localVarReturnValue  *SlurmV0041DeleteJobs200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040DeleteJobs")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041DeleteJobs")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/jobs/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/jobs/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -249,7 +249,7 @@ func (a *SlurmAPIService) SlurmV0040DeleteJobsExecute(r ApiSlurmV0040DeleteJobsR
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.v0040KillJobsMsg
+	localVarPostBody = r.slurmV0041DeleteJobsRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -300,7 +300,7 @@ func (a *SlurmAPIService) SlurmV0040DeleteJobsExecute(r ApiSlurmV0040DeleteJobsR
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiKillJobsResp
+			var v SlurmV0041DeleteJobs200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -323,25 +323,25 @@ func (a *SlurmAPIService) SlurmV0040DeleteJobsExecute(r ApiSlurmV0040DeleteJobsR
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040DeleteNodeRequest struct {
+type ApiSlurmV0041DeleteNodeRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	nodeName string
 }
 
-func (r ApiSlurmV0040DeleteNodeRequest) Execute() (*V0040OpenapiResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040DeleteNodeExecute(r)
+func (r ApiSlurmV0041DeleteNodeRequest) Execute() (*V0041OpenapiResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041DeleteNodeExecute(r)
 }
 
 /*
-SlurmV0040DeleteNode delete node
+SlurmV0041DeleteNode delete node
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param nodeName Node name
- @return ApiSlurmV0040DeleteNodeRequest
+ @return ApiSlurmV0041DeleteNodeRequest
 */
-func (a *SlurmAPIService) SlurmV0040DeleteNode(ctx context.Context, nodeName string) ApiSlurmV0040DeleteNodeRequest {
-	return ApiSlurmV0040DeleteNodeRequest{
+func (a *SlurmAPIService) SlurmV0041DeleteNode(ctx context.Context, nodeName string) ApiSlurmV0041DeleteNodeRequest {
+	return ApiSlurmV0041DeleteNodeRequest{
 		ApiService: a,
 		ctx: ctx,
 		nodeName: nodeName,
@@ -349,21 +349,21 @@ func (a *SlurmAPIService) SlurmV0040DeleteNode(ctx context.Context, nodeName str
 }
 
 // Execute executes the request
-//  @return V0040OpenapiResp
-func (a *SlurmAPIService) SlurmV0040DeleteNodeExecute(r ApiSlurmV0040DeleteNodeRequest) (*V0040OpenapiResp, *http.Response, error) {
+//  @return V0041OpenapiResp
+func (a *SlurmAPIService) SlurmV0041DeleteNodeExecute(r ApiSlurmV0041DeleteNodeRequest) (*V0041OpenapiResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiResp
+		localVarReturnValue  *V0041OpenapiResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040DeleteNode")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041DeleteNode")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/node/{node_name}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/node/{node_name}"
 	localVarPath = strings.Replace(localVarPath, "{"+"node_name"+"}", url.PathEscape(parameterValueToString(r.nodeName, "nodeName")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -437,7 +437,7 @@ func (a *SlurmAPIService) SlurmV0040DeleteNodeExecute(r ApiSlurmV0040DeleteNodeR
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiResp
+			var v V0041OpenapiResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -460,44 +460,44 @@ func (a *SlurmAPIService) SlurmV0040DeleteNodeExecute(r ApiSlurmV0040DeleteNodeR
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetDiagRequest struct {
+type ApiSlurmV0041GetDiagRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 }
 
-func (r ApiSlurmV0040GetDiagRequest) Execute() (*V0040OpenapiDiagResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetDiagExecute(r)
+func (r ApiSlurmV0041GetDiagRequest) Execute() (*SlurmV0041GetDiag200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetDiagExecute(r)
 }
 
 /*
-SlurmV0040GetDiag get diagnostics
+SlurmV0041GetDiag get diagnostics
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetDiagRequest
+ @return ApiSlurmV0041GetDiagRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetDiag(ctx context.Context) ApiSlurmV0040GetDiagRequest {
-	return ApiSlurmV0040GetDiagRequest{
+func (a *SlurmAPIService) SlurmV0041GetDiag(ctx context.Context) ApiSlurmV0041GetDiagRequest {
+	return ApiSlurmV0041GetDiagRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiDiagResp
-func (a *SlurmAPIService) SlurmV0040GetDiagExecute(r ApiSlurmV0040GetDiagRequest) (*V0040OpenapiDiagResp, *http.Response, error) {
+//  @return SlurmV0041GetDiag200Response
+func (a *SlurmAPIService) SlurmV0041GetDiagExecute(r ApiSlurmV0041GetDiagRequest) (*SlurmV0041GetDiag200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiDiagResp
+		localVarReturnValue  *SlurmV0041GetDiag200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetDiag")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetDiag")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/diag/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/diag/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -570,7 +570,7 @@ func (a *SlurmAPIService) SlurmV0040GetDiagExecute(r ApiSlurmV0040GetDiagRequest
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiDiagResp
+			var v SlurmV0041GetDiag200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -593,7 +593,7 @@ func (a *SlurmAPIService) SlurmV0040GetDiagExecute(r ApiSlurmV0040GetDiagRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetJobRequest struct {
+type ApiSlurmV0041GetJobRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	jobId string
@@ -602,30 +602,30 @@ type ApiSlurmV0040GetJobRequest struct {
 }
 
 // Filter jobs since update timestamp
-func (r ApiSlurmV0040GetJobRequest) UpdateTime(updateTime string) ApiSlurmV0040GetJobRequest {
+func (r ApiSlurmV0041GetJobRequest) UpdateTime(updateTime string) ApiSlurmV0041GetJobRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetJobRequest) Flags(flags string) ApiSlurmV0040GetJobRequest {
+func (r ApiSlurmV0041GetJobRequest) Flags(flags string) ApiSlurmV0041GetJobRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetJobRequest) Execute() (*V0040OpenapiJobInfoResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetJobExecute(r)
+func (r ApiSlurmV0041GetJobRequest) Execute() (*V0041OpenapiJobInfoResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetJobExecute(r)
 }
 
 /*
-SlurmV0040GetJob get job info
+SlurmV0041GetJob get job info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param jobId Job ID
- @return ApiSlurmV0040GetJobRequest
+ @return ApiSlurmV0041GetJobRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetJob(ctx context.Context, jobId string) ApiSlurmV0040GetJobRequest {
-	return ApiSlurmV0040GetJobRequest{
+func (a *SlurmAPIService) SlurmV0041GetJob(ctx context.Context, jobId string) ApiSlurmV0041GetJobRequest {
+	return ApiSlurmV0041GetJobRequest{
 		ApiService: a,
 		ctx: ctx,
 		jobId: jobId,
@@ -633,21 +633,21 @@ func (a *SlurmAPIService) SlurmV0040GetJob(ctx context.Context, jobId string) Ap
 }
 
 // Execute executes the request
-//  @return V0040OpenapiJobInfoResp
-func (a *SlurmAPIService) SlurmV0040GetJobExecute(r ApiSlurmV0040GetJobRequest) (*V0040OpenapiJobInfoResp, *http.Response, error) {
+//  @return V0041OpenapiJobInfoResp
+func (a *SlurmAPIService) SlurmV0041GetJobExecute(r ApiSlurmV0041GetJobRequest) (*V0041OpenapiJobInfoResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiJobInfoResp
+		localVarReturnValue  *V0041OpenapiJobInfoResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetJob")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetJob")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/job/{job_id}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/job/{job_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"job_id"+"}", url.PathEscape(parameterValueToString(r.jobId, "jobId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -727,7 +727,7 @@ func (a *SlurmAPIService) SlurmV0040GetJobExecute(r ApiSlurmV0040GetJobRequest) 
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiJobInfoResp
+			var v V0041OpenapiJobInfoResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -750,7 +750,7 @@ func (a *SlurmAPIService) SlurmV0040GetJobExecute(r ApiSlurmV0040GetJobRequest) 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetJobsRequest struct {
+type ApiSlurmV0041GetJobsRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	updateTime *string
@@ -758,50 +758,50 @@ type ApiSlurmV0040GetJobsRequest struct {
 }
 
 // Filter jobs since update timestamp
-func (r ApiSlurmV0040GetJobsRequest) UpdateTime(updateTime string) ApiSlurmV0040GetJobsRequest {
+func (r ApiSlurmV0041GetJobsRequest) UpdateTime(updateTime string) ApiSlurmV0041GetJobsRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetJobsRequest) Flags(flags string) ApiSlurmV0040GetJobsRequest {
+func (r ApiSlurmV0041GetJobsRequest) Flags(flags string) ApiSlurmV0041GetJobsRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetJobsRequest) Execute() (*V0040OpenapiJobInfoResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetJobsExecute(r)
+func (r ApiSlurmV0041GetJobsRequest) Execute() (*V0041OpenapiJobInfoResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetJobsExecute(r)
 }
 
 /*
-SlurmV0040GetJobs get list of jobs
+SlurmV0041GetJobs get list of jobs
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetJobsRequest
+ @return ApiSlurmV0041GetJobsRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetJobs(ctx context.Context) ApiSlurmV0040GetJobsRequest {
-	return ApiSlurmV0040GetJobsRequest{
+func (a *SlurmAPIService) SlurmV0041GetJobs(ctx context.Context) ApiSlurmV0041GetJobsRequest {
+	return ApiSlurmV0041GetJobsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiJobInfoResp
-func (a *SlurmAPIService) SlurmV0040GetJobsExecute(r ApiSlurmV0040GetJobsRequest) (*V0040OpenapiJobInfoResp, *http.Response, error) {
+//  @return V0041OpenapiJobInfoResp
+func (a *SlurmAPIService) SlurmV0041GetJobsExecute(r ApiSlurmV0041GetJobsRequest) (*V0041OpenapiJobInfoResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiJobInfoResp
+		localVarReturnValue  *V0041OpenapiJobInfoResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetJobs")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetJobs")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/jobs/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/jobs/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -880,7 +880,7 @@ func (a *SlurmAPIService) SlurmV0040GetJobsExecute(r ApiSlurmV0040GetJobsRequest
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiJobInfoResp
+			var v V0041OpenapiJobInfoResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -903,7 +903,7 @@ func (a *SlurmAPIService) SlurmV0040GetJobsExecute(r ApiSlurmV0040GetJobsRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetJobsStateRequest struct {
+type ApiSlurmV0041GetJobsStateRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	updateTime *string
@@ -911,50 +911,50 @@ type ApiSlurmV0040GetJobsStateRequest struct {
 }
 
 // Filter jobs since update timestamp
-func (r ApiSlurmV0040GetJobsStateRequest) UpdateTime(updateTime string) ApiSlurmV0040GetJobsStateRequest {
+func (r ApiSlurmV0041GetJobsStateRequest) UpdateTime(updateTime string) ApiSlurmV0041GetJobsStateRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetJobsStateRequest) Flags(flags string) ApiSlurmV0040GetJobsStateRequest {
+func (r ApiSlurmV0041GetJobsStateRequest) Flags(flags string) ApiSlurmV0041GetJobsStateRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetJobsStateRequest) Execute() (*V0040OpenapiJobInfoResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetJobsStateExecute(r)
+func (r ApiSlurmV0041GetJobsStateRequest) Execute() (*V0041OpenapiJobInfoResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetJobsStateExecute(r)
 }
 
 /*
-SlurmV0040GetJobsState get list of job states
+SlurmV0041GetJobsState get list of job states
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetJobsStateRequest
+ @return ApiSlurmV0041GetJobsStateRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetJobsState(ctx context.Context) ApiSlurmV0040GetJobsStateRequest {
-	return ApiSlurmV0040GetJobsStateRequest{
+func (a *SlurmAPIService) SlurmV0041GetJobsState(ctx context.Context) ApiSlurmV0041GetJobsStateRequest {
+	return ApiSlurmV0041GetJobsStateRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiJobInfoResp
-func (a *SlurmAPIService) SlurmV0040GetJobsStateExecute(r ApiSlurmV0040GetJobsStateRequest) (*V0040OpenapiJobInfoResp, *http.Response, error) {
+//  @return V0041OpenapiJobInfoResp
+func (a *SlurmAPIService) SlurmV0041GetJobsStateExecute(r ApiSlurmV0041GetJobsStateRequest) (*V0041OpenapiJobInfoResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiJobInfoResp
+		localVarReturnValue  *V0041OpenapiJobInfoResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetJobsState")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetJobsState")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/jobs/state/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/jobs/state/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1033,7 +1033,7 @@ func (a *SlurmAPIService) SlurmV0040GetJobsStateExecute(r ApiSlurmV0040GetJobsSt
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiJobInfoResp
+			var v V0041OpenapiJobInfoResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1056,44 +1056,44 @@ func (a *SlurmAPIService) SlurmV0040GetJobsStateExecute(r ApiSlurmV0040GetJobsSt
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetLicensesRequest struct {
+type ApiSlurmV0041GetLicensesRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 }
 
-func (r ApiSlurmV0040GetLicensesRequest) Execute() (*V0040OpenapiLicensesResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetLicensesExecute(r)
+func (r ApiSlurmV0041GetLicensesRequest) Execute() (*SlurmV0041GetLicenses200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetLicensesExecute(r)
 }
 
 /*
-SlurmV0040GetLicenses get all Slurm tracked license info
+SlurmV0041GetLicenses get all Slurm tracked license info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetLicensesRequest
+ @return ApiSlurmV0041GetLicensesRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetLicenses(ctx context.Context) ApiSlurmV0040GetLicensesRequest {
-	return ApiSlurmV0040GetLicensesRequest{
+func (a *SlurmAPIService) SlurmV0041GetLicenses(ctx context.Context) ApiSlurmV0041GetLicensesRequest {
+	return ApiSlurmV0041GetLicensesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiLicensesResp
-func (a *SlurmAPIService) SlurmV0040GetLicensesExecute(r ApiSlurmV0040GetLicensesRequest) (*V0040OpenapiLicensesResp, *http.Response, error) {
+//  @return SlurmV0041GetLicenses200Response
+func (a *SlurmAPIService) SlurmV0041GetLicensesExecute(r ApiSlurmV0041GetLicensesRequest) (*SlurmV0041GetLicenses200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiLicensesResp
+		localVarReturnValue  *SlurmV0041GetLicenses200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetLicenses")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetLicenses")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/licenses/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/licenses/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1166,7 +1166,7 @@ func (a *SlurmAPIService) SlurmV0040GetLicensesExecute(r ApiSlurmV0040GetLicense
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiLicensesResp
+			var v SlurmV0041GetLicenses200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1189,7 +1189,7 @@ func (a *SlurmAPIService) SlurmV0040GetLicensesExecute(r ApiSlurmV0040GetLicense
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetNodeRequest struct {
+type ApiSlurmV0041GetNodeRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	nodeName string
@@ -1198,30 +1198,30 @@ type ApiSlurmV0040GetNodeRequest struct {
 }
 
 // Filter jobs since update timestamp
-func (r ApiSlurmV0040GetNodeRequest) UpdateTime(updateTime string) ApiSlurmV0040GetNodeRequest {
+func (r ApiSlurmV0041GetNodeRequest) UpdateTime(updateTime string) ApiSlurmV0041GetNodeRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetNodeRequest) Flags(flags string) ApiSlurmV0040GetNodeRequest {
+func (r ApiSlurmV0041GetNodeRequest) Flags(flags string) ApiSlurmV0041GetNodeRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetNodeRequest) Execute() (*V0040OpenapiNodesResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetNodeExecute(r)
+func (r ApiSlurmV0041GetNodeRequest) Execute() (*V0041OpenapiNodesResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetNodeExecute(r)
 }
 
 /*
-SlurmV0040GetNode get node info
+SlurmV0041GetNode get node info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param nodeName Node name
- @return ApiSlurmV0040GetNodeRequest
+ @return ApiSlurmV0041GetNodeRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetNode(ctx context.Context, nodeName string) ApiSlurmV0040GetNodeRequest {
-	return ApiSlurmV0040GetNodeRequest{
+func (a *SlurmAPIService) SlurmV0041GetNode(ctx context.Context, nodeName string) ApiSlurmV0041GetNodeRequest {
+	return ApiSlurmV0041GetNodeRequest{
 		ApiService: a,
 		ctx: ctx,
 		nodeName: nodeName,
@@ -1229,21 +1229,21 @@ func (a *SlurmAPIService) SlurmV0040GetNode(ctx context.Context, nodeName string
 }
 
 // Execute executes the request
-//  @return V0040OpenapiNodesResp
-func (a *SlurmAPIService) SlurmV0040GetNodeExecute(r ApiSlurmV0040GetNodeRequest) (*V0040OpenapiNodesResp, *http.Response, error) {
+//  @return V0041OpenapiNodesResp
+func (a *SlurmAPIService) SlurmV0041GetNodeExecute(r ApiSlurmV0041GetNodeRequest) (*V0041OpenapiNodesResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiNodesResp
+		localVarReturnValue  *V0041OpenapiNodesResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetNode")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetNode")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/node/{node_name}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/node/{node_name}"
 	localVarPath = strings.Replace(localVarPath, "{"+"node_name"+"}", url.PathEscape(parameterValueToString(r.nodeName, "nodeName")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -1323,7 +1323,7 @@ func (a *SlurmAPIService) SlurmV0040GetNodeExecute(r ApiSlurmV0040GetNodeRequest
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiNodesResp
+			var v V0041OpenapiNodesResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1346,7 +1346,7 @@ func (a *SlurmAPIService) SlurmV0040GetNodeExecute(r ApiSlurmV0040GetNodeRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetNodesRequest struct {
+type ApiSlurmV0041GetNodesRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	updateTime *string
@@ -1354,50 +1354,50 @@ type ApiSlurmV0040GetNodesRequest struct {
 }
 
 // Filter jobs since update timestamp
-func (r ApiSlurmV0040GetNodesRequest) UpdateTime(updateTime string) ApiSlurmV0040GetNodesRequest {
+func (r ApiSlurmV0041GetNodesRequest) UpdateTime(updateTime string) ApiSlurmV0041GetNodesRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetNodesRequest) Flags(flags string) ApiSlurmV0040GetNodesRequest {
+func (r ApiSlurmV0041GetNodesRequest) Flags(flags string) ApiSlurmV0041GetNodesRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetNodesRequest) Execute() (*V0040OpenapiNodesResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetNodesExecute(r)
+func (r ApiSlurmV0041GetNodesRequest) Execute() (*V0041OpenapiNodesResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetNodesExecute(r)
 }
 
 /*
-SlurmV0040GetNodes get node(s) info
+SlurmV0041GetNodes get node(s) info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetNodesRequest
+ @return ApiSlurmV0041GetNodesRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetNodes(ctx context.Context) ApiSlurmV0040GetNodesRequest {
-	return ApiSlurmV0040GetNodesRequest{
+func (a *SlurmAPIService) SlurmV0041GetNodes(ctx context.Context) ApiSlurmV0041GetNodesRequest {
+	return ApiSlurmV0041GetNodesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiNodesResp
-func (a *SlurmAPIService) SlurmV0040GetNodesExecute(r ApiSlurmV0040GetNodesRequest) (*V0040OpenapiNodesResp, *http.Response, error) {
+//  @return V0041OpenapiNodesResp
+func (a *SlurmAPIService) SlurmV0041GetNodesExecute(r ApiSlurmV0041GetNodesRequest) (*V0041OpenapiNodesResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiNodesResp
+		localVarReturnValue  *V0041OpenapiNodesResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetNodes")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetNodes")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/nodes/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/nodes/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1476,7 +1476,7 @@ func (a *SlurmAPIService) SlurmV0040GetNodesExecute(r ApiSlurmV0040GetNodesReque
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiNodesResp
+			var v V0041OpenapiNodesResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1499,7 +1499,7 @@ func (a *SlurmAPIService) SlurmV0040GetNodesExecute(r ApiSlurmV0040GetNodesReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetPartitionRequest struct {
+type ApiSlurmV0041GetPartitionRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	partitionName string
@@ -1508,30 +1508,30 @@ type ApiSlurmV0040GetPartitionRequest struct {
 }
 
 // Filter partitions since update timestamp
-func (r ApiSlurmV0040GetPartitionRequest) UpdateTime(updateTime string) ApiSlurmV0040GetPartitionRequest {
+func (r ApiSlurmV0041GetPartitionRequest) UpdateTime(updateTime string) ApiSlurmV0041GetPartitionRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetPartitionRequest) Flags(flags string) ApiSlurmV0040GetPartitionRequest {
+func (r ApiSlurmV0041GetPartitionRequest) Flags(flags string) ApiSlurmV0041GetPartitionRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetPartitionRequest) Execute() (*V0040OpenapiPartitionResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetPartitionExecute(r)
+func (r ApiSlurmV0041GetPartitionRequest) Execute() (*V0041OpenapiPartitionResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetPartitionExecute(r)
 }
 
 /*
-SlurmV0040GetPartition get partition info
+SlurmV0041GetPartition get partition info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param partitionName Partition name
- @return ApiSlurmV0040GetPartitionRequest
+ @return ApiSlurmV0041GetPartitionRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetPartition(ctx context.Context, partitionName string) ApiSlurmV0040GetPartitionRequest {
-	return ApiSlurmV0040GetPartitionRequest{
+func (a *SlurmAPIService) SlurmV0041GetPartition(ctx context.Context, partitionName string) ApiSlurmV0041GetPartitionRequest {
+	return ApiSlurmV0041GetPartitionRequest{
 		ApiService: a,
 		ctx: ctx,
 		partitionName: partitionName,
@@ -1539,21 +1539,21 @@ func (a *SlurmAPIService) SlurmV0040GetPartition(ctx context.Context, partitionN
 }
 
 // Execute executes the request
-//  @return V0040OpenapiPartitionResp
-func (a *SlurmAPIService) SlurmV0040GetPartitionExecute(r ApiSlurmV0040GetPartitionRequest) (*V0040OpenapiPartitionResp, *http.Response, error) {
+//  @return V0041OpenapiPartitionResp
+func (a *SlurmAPIService) SlurmV0041GetPartitionExecute(r ApiSlurmV0041GetPartitionRequest) (*V0041OpenapiPartitionResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiPartitionResp
+		localVarReturnValue  *V0041OpenapiPartitionResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetPartition")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetPartition")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/partition/{partition_name}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/partition/{partition_name}"
 	localVarPath = strings.Replace(localVarPath, "{"+"partition_name"+"}", url.PathEscape(parameterValueToString(r.partitionName, "partitionName")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -1633,7 +1633,7 @@ func (a *SlurmAPIService) SlurmV0040GetPartitionExecute(r ApiSlurmV0040GetPartit
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiPartitionResp
+			var v V0041OpenapiPartitionResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1656,7 +1656,7 @@ func (a *SlurmAPIService) SlurmV0040GetPartitionExecute(r ApiSlurmV0040GetPartit
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetPartitionsRequest struct {
+type ApiSlurmV0041GetPartitionsRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	updateTime *string
@@ -1664,50 +1664,50 @@ type ApiSlurmV0040GetPartitionsRequest struct {
 }
 
 // Filter partitions since update timestamp
-func (r ApiSlurmV0040GetPartitionsRequest) UpdateTime(updateTime string) ApiSlurmV0040GetPartitionsRequest {
+func (r ApiSlurmV0041GetPartitionsRequest) UpdateTime(updateTime string) ApiSlurmV0041GetPartitionsRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
 // Query flags
-func (r ApiSlurmV0040GetPartitionsRequest) Flags(flags string) ApiSlurmV0040GetPartitionsRequest {
+func (r ApiSlurmV0041GetPartitionsRequest) Flags(flags string) ApiSlurmV0041GetPartitionsRequest {
 	r.flags = &flags
 	return r
 }
 
-func (r ApiSlurmV0040GetPartitionsRequest) Execute() (*V0040OpenapiPartitionResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetPartitionsExecute(r)
+func (r ApiSlurmV0041GetPartitionsRequest) Execute() (*V0041OpenapiPartitionResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetPartitionsExecute(r)
 }
 
 /*
-SlurmV0040GetPartitions get all partition info
+SlurmV0041GetPartitions get all partition info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetPartitionsRequest
+ @return ApiSlurmV0041GetPartitionsRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetPartitions(ctx context.Context) ApiSlurmV0040GetPartitionsRequest {
-	return ApiSlurmV0040GetPartitionsRequest{
+func (a *SlurmAPIService) SlurmV0041GetPartitions(ctx context.Context) ApiSlurmV0041GetPartitionsRequest {
+	return ApiSlurmV0041GetPartitionsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiPartitionResp
-func (a *SlurmAPIService) SlurmV0040GetPartitionsExecute(r ApiSlurmV0040GetPartitionsRequest) (*V0040OpenapiPartitionResp, *http.Response, error) {
+//  @return V0041OpenapiPartitionResp
+func (a *SlurmAPIService) SlurmV0041GetPartitionsExecute(r ApiSlurmV0041GetPartitionsRequest) (*V0041OpenapiPartitionResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiPartitionResp
+		localVarReturnValue  *V0041OpenapiPartitionResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetPartitions")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetPartitions")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/partitions/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/partitions/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1786,7 +1786,7 @@ func (a *SlurmAPIService) SlurmV0040GetPartitionsExecute(r ApiSlurmV0040GetParti
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiPartitionResp
+			var v V0041OpenapiPartitionResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1809,44 +1809,44 @@ func (a *SlurmAPIService) SlurmV0040GetPartitionsExecute(r ApiSlurmV0040GetParti
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetPingRequest struct {
+type ApiSlurmV0041GetPingRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 }
 
-func (r ApiSlurmV0040GetPingRequest) Execute() (*V0040OpenapiPingArrayResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetPingExecute(r)
+func (r ApiSlurmV0041GetPingRequest) Execute() (*SlurmV0041GetPing200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetPingExecute(r)
 }
 
 /*
-SlurmV0040GetPing ping test
+SlurmV0041GetPing ping test
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetPingRequest
+ @return ApiSlurmV0041GetPingRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetPing(ctx context.Context) ApiSlurmV0040GetPingRequest {
-	return ApiSlurmV0040GetPingRequest{
+func (a *SlurmAPIService) SlurmV0041GetPing(ctx context.Context) ApiSlurmV0041GetPingRequest {
+	return ApiSlurmV0041GetPingRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiPingArrayResp
-func (a *SlurmAPIService) SlurmV0040GetPingExecute(r ApiSlurmV0040GetPingRequest) (*V0040OpenapiPingArrayResp, *http.Response, error) {
+//  @return SlurmV0041GetPing200Response
+func (a *SlurmAPIService) SlurmV0041GetPingExecute(r ApiSlurmV0041GetPingRequest) (*SlurmV0041GetPing200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiPingArrayResp
+		localVarReturnValue  *SlurmV0041GetPing200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetPing")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetPing")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/ping/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/ping/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1919,7 +1919,7 @@ func (a *SlurmAPIService) SlurmV0040GetPingExecute(r ApiSlurmV0040GetPingRequest
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiPingArrayResp
+			var v SlurmV0041GetPing200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -1942,44 +1942,44 @@ func (a *SlurmAPIService) SlurmV0040GetPingExecute(r ApiSlurmV0040GetPingRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetReconfigureRequest struct {
+type ApiSlurmV0041GetReconfigureRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 }
 
-func (r ApiSlurmV0040GetReconfigureRequest) Execute() (*V0040OpenapiResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetReconfigureExecute(r)
+func (r ApiSlurmV0041GetReconfigureRequest) Execute() (*V0041OpenapiResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetReconfigureExecute(r)
 }
 
 /*
-SlurmV0040GetReconfigure request slurmctld reconfigure
+SlurmV0041GetReconfigure request slurmctld reconfigure
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetReconfigureRequest
+ @return ApiSlurmV0041GetReconfigureRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetReconfigure(ctx context.Context) ApiSlurmV0040GetReconfigureRequest {
-	return ApiSlurmV0040GetReconfigureRequest{
+func (a *SlurmAPIService) SlurmV0041GetReconfigure(ctx context.Context) ApiSlurmV0041GetReconfigureRequest {
+	return ApiSlurmV0041GetReconfigureRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiResp
-func (a *SlurmAPIService) SlurmV0040GetReconfigureExecute(r ApiSlurmV0040GetReconfigureRequest) (*V0040OpenapiResp, *http.Response, error) {
+//  @return V0041OpenapiResp
+func (a *SlurmAPIService) SlurmV0041GetReconfigureExecute(r ApiSlurmV0041GetReconfigureRequest) (*V0041OpenapiResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiResp
+		localVarReturnValue  *V0041OpenapiResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetReconfigure")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetReconfigure")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/reconfigure/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/reconfigure/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2052,7 +2052,7 @@ func (a *SlurmAPIService) SlurmV0040GetReconfigureExecute(r ApiSlurmV0040GetReco
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiResp
+			var v V0041OpenapiResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2075,7 +2075,7 @@ func (a *SlurmAPIService) SlurmV0040GetReconfigureExecute(r ApiSlurmV0040GetReco
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetReservationRequest struct {
+type ApiSlurmV0041GetReservationRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	reservationName string
@@ -2083,24 +2083,24 @@ type ApiSlurmV0040GetReservationRequest struct {
 }
 
 // Filter reservations since update timestamp
-func (r ApiSlurmV0040GetReservationRequest) UpdateTime(updateTime string) ApiSlurmV0040GetReservationRequest {
+func (r ApiSlurmV0041GetReservationRequest) UpdateTime(updateTime string) ApiSlurmV0041GetReservationRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
-func (r ApiSlurmV0040GetReservationRequest) Execute() (*V0040OpenapiReservationResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetReservationExecute(r)
+func (r ApiSlurmV0041GetReservationRequest) Execute() (*V0041OpenapiReservationResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetReservationExecute(r)
 }
 
 /*
-SlurmV0040GetReservation get reservation info
+SlurmV0041GetReservation get reservation info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param reservationName Reservation name
- @return ApiSlurmV0040GetReservationRequest
+ @return ApiSlurmV0041GetReservationRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetReservation(ctx context.Context, reservationName string) ApiSlurmV0040GetReservationRequest {
-	return ApiSlurmV0040GetReservationRequest{
+func (a *SlurmAPIService) SlurmV0041GetReservation(ctx context.Context, reservationName string) ApiSlurmV0041GetReservationRequest {
+	return ApiSlurmV0041GetReservationRequest{
 		ApiService: a,
 		ctx: ctx,
 		reservationName: reservationName,
@@ -2108,21 +2108,21 @@ func (a *SlurmAPIService) SlurmV0040GetReservation(ctx context.Context, reservat
 }
 
 // Execute executes the request
-//  @return V0040OpenapiReservationResp
-func (a *SlurmAPIService) SlurmV0040GetReservationExecute(r ApiSlurmV0040GetReservationRequest) (*V0040OpenapiReservationResp, *http.Response, error) {
+//  @return V0041OpenapiReservationResp
+func (a *SlurmAPIService) SlurmV0041GetReservationExecute(r ApiSlurmV0041GetReservationRequest) (*V0041OpenapiReservationResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiReservationResp
+		localVarReturnValue  *V0041OpenapiReservationResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetReservation")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetReservation")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/reservation/{reservation_name}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/reservation/{reservation_name}"
 	localVarPath = strings.Replace(localVarPath, "{"+"reservation_name"+"}", url.PathEscape(parameterValueToString(r.reservationName, "reservationName")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -2199,7 +2199,7 @@ func (a *SlurmAPIService) SlurmV0040GetReservationExecute(r ApiSlurmV0040GetRese
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiReservationResp
+			var v V0041OpenapiReservationResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2222,51 +2222,51 @@ func (a *SlurmAPIService) SlurmV0040GetReservationExecute(r ApiSlurmV0040GetRese
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetReservationsRequest struct {
+type ApiSlurmV0041GetReservationsRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	updateTime *string
 }
 
 // Filter reservations since update timestamp
-func (r ApiSlurmV0040GetReservationsRequest) UpdateTime(updateTime string) ApiSlurmV0040GetReservationsRequest {
+func (r ApiSlurmV0041GetReservationsRequest) UpdateTime(updateTime string) ApiSlurmV0041GetReservationsRequest {
 	r.updateTime = &updateTime
 	return r
 }
 
-func (r ApiSlurmV0040GetReservationsRequest) Execute() (*V0040OpenapiReservationResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetReservationsExecute(r)
+func (r ApiSlurmV0041GetReservationsRequest) Execute() (*V0041OpenapiReservationResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetReservationsExecute(r)
 }
 
 /*
-SlurmV0040GetReservations get all reservation info
+SlurmV0041GetReservations get all reservation info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetReservationsRequest
+ @return ApiSlurmV0041GetReservationsRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetReservations(ctx context.Context) ApiSlurmV0040GetReservationsRequest {
-	return ApiSlurmV0040GetReservationsRequest{
+func (a *SlurmAPIService) SlurmV0041GetReservations(ctx context.Context) ApiSlurmV0041GetReservationsRequest {
+	return ApiSlurmV0041GetReservationsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiReservationResp
-func (a *SlurmAPIService) SlurmV0040GetReservationsExecute(r ApiSlurmV0040GetReservationsRequest) (*V0040OpenapiReservationResp, *http.Response, error) {
+//  @return V0041OpenapiReservationResp
+func (a *SlurmAPIService) SlurmV0041GetReservationsExecute(r ApiSlurmV0041GetReservationsRequest) (*V0041OpenapiReservationResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiReservationResp
+		localVarReturnValue  *V0041OpenapiReservationResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetReservations")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetReservations")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/reservations/"
+	localVarPath := localBasePath + "/slurm/v0.0.41/reservations/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2342,7 +2342,7 @@ func (a *SlurmAPIService) SlurmV0040GetReservationsExecute(r ApiSlurmV0040GetRes
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiReservationResp
+			var v V0041OpenapiReservationResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2365,7 +2365,7 @@ func (a *SlurmAPIService) SlurmV0040GetReservationsExecute(r ApiSlurmV0040GetRes
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040GetSharesRequest struct {
+type ApiSlurmV0041GetSharesRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	accounts *string
@@ -2373,50 +2373,50 @@ type ApiSlurmV0040GetSharesRequest struct {
 }
 
 // Accounts to query
-func (r ApiSlurmV0040GetSharesRequest) Accounts(accounts string) ApiSlurmV0040GetSharesRequest {
+func (r ApiSlurmV0041GetSharesRequest) Accounts(accounts string) ApiSlurmV0041GetSharesRequest {
 	r.accounts = &accounts
 	return r
 }
 
 // Users to query
-func (r ApiSlurmV0040GetSharesRequest) Users(users string) ApiSlurmV0040GetSharesRequest {
+func (r ApiSlurmV0041GetSharesRequest) Users(users string) ApiSlurmV0041GetSharesRequest {
 	r.users = &users
 	return r
 }
 
-func (r ApiSlurmV0040GetSharesRequest) Execute() (*V0040OpenapiSharesResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040GetSharesExecute(r)
+func (r ApiSlurmV0041GetSharesRequest) Execute() (*SlurmV0041GetShares200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041GetSharesExecute(r)
 }
 
 /*
-SlurmV0040GetShares get fairshare info
+SlurmV0041GetShares get fairshare info
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040GetSharesRequest
+ @return ApiSlurmV0041GetSharesRequest
 */
-func (a *SlurmAPIService) SlurmV0040GetShares(ctx context.Context) ApiSlurmV0040GetSharesRequest {
-	return ApiSlurmV0040GetSharesRequest{
+func (a *SlurmAPIService) SlurmV0041GetShares(ctx context.Context) ApiSlurmV0041GetSharesRequest {
+	return ApiSlurmV0041GetSharesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiSharesResp
-func (a *SlurmAPIService) SlurmV0040GetSharesExecute(r ApiSlurmV0040GetSharesRequest) (*V0040OpenapiSharesResp, *http.Response, error) {
+//  @return SlurmV0041GetShares200Response
+func (a *SlurmAPIService) SlurmV0041GetSharesExecute(r ApiSlurmV0041GetSharesRequest) (*SlurmV0041GetShares200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiSharesResp
+		localVarReturnValue  *SlurmV0041GetShares200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040GetShares")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041GetShares")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/shares"
+	localVarPath := localBasePath + "/slurm/v0.0.41/shares"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2495,7 +2495,7 @@ func (a *SlurmAPIService) SlurmV0040GetSharesExecute(r ApiSlurmV0040GetSharesReq
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiSharesResp
+			var v SlurmV0041GetShares200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2518,32 +2518,32 @@ func (a *SlurmAPIService) SlurmV0040GetSharesExecute(r ApiSlurmV0040GetSharesReq
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040PostJobRequest struct {
+type ApiSlurmV0041PostJobRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
 	jobId string
-	v0040JobDescMsg *V0040JobDescMsg
+	slurmV0041PostJobSubmitRequestJobsInner *SlurmV0041PostJobSubmitRequestJobsInner
 }
 
 // Job update description
-func (r ApiSlurmV0040PostJobRequest) V0040JobDescMsg(v0040JobDescMsg V0040JobDescMsg) ApiSlurmV0040PostJobRequest {
-	r.v0040JobDescMsg = &v0040JobDescMsg
+func (r ApiSlurmV0041PostJobRequest) SlurmV0041PostJobSubmitRequestJobsInner(slurmV0041PostJobSubmitRequestJobsInner SlurmV0041PostJobSubmitRequestJobsInner) ApiSlurmV0041PostJobRequest {
+	r.slurmV0041PostJobSubmitRequestJobsInner = &slurmV0041PostJobSubmitRequestJobsInner
 	return r
 }
 
-func (r ApiSlurmV0040PostJobRequest) Execute() (*V0040OpenapiJobPostResponse, *http.Response, error) {
-	return r.ApiService.SlurmV0040PostJobExecute(r)
+func (r ApiSlurmV0041PostJobRequest) Execute() (*SlurmV0041PostJob200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041PostJobExecute(r)
 }
 
 /*
-SlurmV0040PostJob update job
+SlurmV0041PostJob update job
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param jobId Job ID
- @return ApiSlurmV0040PostJobRequest
+ @return ApiSlurmV0041PostJobRequest
 */
-func (a *SlurmAPIService) SlurmV0040PostJob(ctx context.Context, jobId string) ApiSlurmV0040PostJobRequest {
-	return ApiSlurmV0040PostJobRequest{
+func (a *SlurmAPIService) SlurmV0041PostJob(ctx context.Context, jobId string) ApiSlurmV0041PostJobRequest {
+	return ApiSlurmV0041PostJobRequest{
 		ApiService: a,
 		ctx: ctx,
 		jobId: jobId,
@@ -2551,21 +2551,21 @@ func (a *SlurmAPIService) SlurmV0040PostJob(ctx context.Context, jobId string) A
 }
 
 // Execute executes the request
-//  @return V0040OpenapiJobPostResponse
-func (a *SlurmAPIService) SlurmV0040PostJobExecute(r ApiSlurmV0040PostJobRequest) (*V0040OpenapiJobPostResponse, *http.Response, error) {
+//  @return SlurmV0041PostJob200Response
+func (a *SlurmAPIService) SlurmV0041PostJobExecute(r ApiSlurmV0041PostJobRequest) (*SlurmV0041PostJob200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiJobPostResponse
+		localVarReturnValue  *SlurmV0041PostJob200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040PostJob")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041PostJob")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/job/{job_id}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/job/{job_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"job_id"+"}", url.PathEscape(parameterValueToString(r.jobId, "jobId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -2590,7 +2590,7 @@ func (a *SlurmAPIService) SlurmV0040PostJobExecute(r ApiSlurmV0040PostJobRequest
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.v0040JobDescMsg
+	localVarPostBody = r.slurmV0041PostJobSubmitRequestJobsInner
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -2641,7 +2641,7 @@ func (a *SlurmAPIService) SlurmV0040PostJobExecute(r ApiSlurmV0040PostJobRequest
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiJobPostResponse
+			var v SlurmV0041PostJob200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2664,51 +2664,51 @@ func (a *SlurmAPIService) SlurmV0040PostJobExecute(r ApiSlurmV0040PostJobRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040PostJobSubmitRequest struct {
+type ApiSlurmV0041PostJobAllocateRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
-	v0040JobSubmitReq *V0040JobSubmitReq
+	slurmV0041PostJobAllocateRequest *SlurmV0041PostJobAllocateRequest
 }
 
-// Job description
-func (r ApiSlurmV0040PostJobSubmitRequest) V0040JobSubmitReq(v0040JobSubmitReq V0040JobSubmitReq) ApiSlurmV0040PostJobSubmitRequest {
-	r.v0040JobSubmitReq = &v0040JobSubmitReq
+// Job allocation description
+func (r ApiSlurmV0041PostJobAllocateRequest) SlurmV0041PostJobAllocateRequest(slurmV0041PostJobAllocateRequest SlurmV0041PostJobAllocateRequest) ApiSlurmV0041PostJobAllocateRequest {
+	r.slurmV0041PostJobAllocateRequest = &slurmV0041PostJobAllocateRequest
 	return r
 }
 
-func (r ApiSlurmV0040PostJobSubmitRequest) Execute() (*V0040OpenapiJobSubmitResponse, *http.Response, error) {
-	return r.ApiService.SlurmV0040PostJobSubmitExecute(r)
+func (r ApiSlurmV0041PostJobAllocateRequest) Execute() (*SlurmV0041PostJobAllocate200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041PostJobAllocateExecute(r)
 }
 
 /*
-SlurmV0040PostJobSubmit submit new job
+SlurmV0041PostJobAllocate submit new job allocation without any steps that must be signaled to stop
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSlurmV0040PostJobSubmitRequest
+ @return ApiSlurmV0041PostJobAllocateRequest
 */
-func (a *SlurmAPIService) SlurmV0040PostJobSubmit(ctx context.Context) ApiSlurmV0040PostJobSubmitRequest {
-	return ApiSlurmV0040PostJobSubmitRequest{
+func (a *SlurmAPIService) SlurmV0041PostJobAllocate(ctx context.Context) ApiSlurmV0041PostJobAllocateRequest {
+	return ApiSlurmV0041PostJobAllocateRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//  @return V0040OpenapiJobSubmitResponse
-func (a *SlurmAPIService) SlurmV0040PostJobSubmitExecute(r ApiSlurmV0040PostJobSubmitRequest) (*V0040OpenapiJobSubmitResponse, *http.Response, error) {
+//  @return SlurmV0041PostJobAllocate200Response
+func (a *SlurmAPIService) SlurmV0041PostJobAllocateExecute(r ApiSlurmV0041PostJobAllocateRequest) (*SlurmV0041PostJobAllocate200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiJobSubmitResponse
+		localVarReturnValue  *SlurmV0041PostJobAllocate200Response
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040PostJobSubmit")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041PostJobAllocate")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/job/submit"
+	localVarPath := localBasePath + "/slurm/v0.0.41/job/allocate"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2732,7 +2732,7 @@ func (a *SlurmAPIService) SlurmV0040PostJobSubmitExecute(r ApiSlurmV0040PostJobS
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.v0040JobSubmitReq
+	localVarPostBody = r.slurmV0041PostJobAllocateRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -2783,7 +2783,7 @@ func (a *SlurmAPIService) SlurmV0040PostJobSubmitExecute(r ApiSlurmV0040PostJobS
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiJobSubmitResponse
+			var v SlurmV0041PostJobAllocate200Response
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -2806,32 +2806,174 @@ func (a *SlurmAPIService) SlurmV0040PostJobSubmitExecute(r ApiSlurmV0040PostJobS
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSlurmV0040PostNodeRequest struct {
+type ApiSlurmV0041PostJobSubmitRequest struct {
 	ctx context.Context
 	ApiService *SlurmAPIService
-	nodeName string
-	v0040UpdateNodeMsg *V0040UpdateNodeMsg
+	slurmV0041PostJobSubmitRequest *SlurmV0041PostJobSubmitRequest
 }
 
-// Node update description
-func (r ApiSlurmV0040PostNodeRequest) V0040UpdateNodeMsg(v0040UpdateNodeMsg V0040UpdateNodeMsg) ApiSlurmV0040PostNodeRequest {
-	r.v0040UpdateNodeMsg = &v0040UpdateNodeMsg
+// Job description
+func (r ApiSlurmV0041PostJobSubmitRequest) SlurmV0041PostJobSubmitRequest(slurmV0041PostJobSubmitRequest SlurmV0041PostJobSubmitRequest) ApiSlurmV0041PostJobSubmitRequest {
+	r.slurmV0041PostJobSubmitRequest = &slurmV0041PostJobSubmitRequest
 	return r
 }
 
-func (r ApiSlurmV0040PostNodeRequest) Execute() (*V0040OpenapiResp, *http.Response, error) {
-	return r.ApiService.SlurmV0040PostNodeExecute(r)
+func (r ApiSlurmV0041PostJobSubmitRequest) Execute() (*SlurmV0041PostJobSubmit200Response, *http.Response, error) {
+	return r.ApiService.SlurmV0041PostJobSubmitExecute(r)
 }
 
 /*
-SlurmV0040PostNode update node properties
+SlurmV0041PostJobSubmit submit new job
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSlurmV0041PostJobSubmitRequest
+*/
+func (a *SlurmAPIService) SlurmV0041PostJobSubmit(ctx context.Context) ApiSlurmV0041PostJobSubmitRequest {
+	return ApiSlurmV0041PostJobSubmitRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return SlurmV0041PostJobSubmit200Response
+func (a *SlurmAPIService) SlurmV0041PostJobSubmitExecute(r ApiSlurmV0041PostJobSubmitRequest) (*SlurmV0041PostJobSubmit200Response, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *SlurmV0041PostJobSubmit200Response
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041PostJobSubmit")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/slurm/v0.0.41/job/submit"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.slurmV0041PostJobSubmitRequest
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["user"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["X-SLURM-USER-NAME"] = key
+			}
+		}
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["token"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["X-SLURM-USER-TOKEN"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+			var v SlurmV0041PostJobSubmit200Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSlurmV0041PostNodeRequest struct {
+	ctx context.Context
+	ApiService *SlurmAPIService
+	nodeName string
+	slurmV0041PostNodeRequest *SlurmV0041PostNodeRequest
+}
+
+// Node update description
+func (r ApiSlurmV0041PostNodeRequest) SlurmV0041PostNodeRequest(slurmV0041PostNodeRequest SlurmV0041PostNodeRequest) ApiSlurmV0041PostNodeRequest {
+	r.slurmV0041PostNodeRequest = &slurmV0041PostNodeRequest
+	return r
+}
+
+func (r ApiSlurmV0041PostNodeRequest) Execute() (*V0041OpenapiResp, *http.Response, error) {
+	return r.ApiService.SlurmV0041PostNodeExecute(r)
+}
+
+/*
+SlurmV0041PostNode update node properties
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param nodeName Node name
- @return ApiSlurmV0040PostNodeRequest
+ @return ApiSlurmV0041PostNodeRequest
 */
-func (a *SlurmAPIService) SlurmV0040PostNode(ctx context.Context, nodeName string) ApiSlurmV0040PostNodeRequest {
-	return ApiSlurmV0040PostNodeRequest{
+func (a *SlurmAPIService) SlurmV0041PostNode(ctx context.Context, nodeName string) ApiSlurmV0041PostNodeRequest {
+	return ApiSlurmV0041PostNodeRequest{
 		ApiService: a,
 		ctx: ctx,
 		nodeName: nodeName,
@@ -2839,21 +2981,21 @@ func (a *SlurmAPIService) SlurmV0040PostNode(ctx context.Context, nodeName strin
 }
 
 // Execute executes the request
-//  @return V0040OpenapiResp
-func (a *SlurmAPIService) SlurmV0040PostNodeExecute(r ApiSlurmV0040PostNodeRequest) (*V0040OpenapiResp, *http.Response, error) {
+//  @return V0041OpenapiResp
+func (a *SlurmAPIService) SlurmV0041PostNodeExecute(r ApiSlurmV0041PostNodeRequest) (*V0041OpenapiResp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V0040OpenapiResp
+		localVarReturnValue  *V0041OpenapiResp
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0040PostNode")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SlurmAPIService.SlurmV0041PostNode")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/slurm/v0.0.40/node/{node_name}"
+	localVarPath := localBasePath + "/slurm/v0.0.41/node/{node_name}"
 	localVarPath = strings.Replace(localVarPath, "{"+"node_name"+"}", url.PathEscape(parameterValueToString(r.nodeName, "nodeName")), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -2878,7 +3020,7 @@ func (a *SlurmAPIService) SlurmV0040PostNodeExecute(r ApiSlurmV0040PostNodeReque
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.v0040UpdateNodeMsg
+	localVarPostBody = r.slurmV0041PostNodeRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -2929,7 +3071,7 @@ func (a *SlurmAPIService) SlurmV0040PostNodeExecute(r ApiSlurmV0040PostNodeReque
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v V0040OpenapiResp
+			var v V0041OpenapiResp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

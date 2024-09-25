@@ -23,7 +23,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import openapi "github.com/lcrownover/openapi-slurm-24-05"
+import openapi "github.com/lcrownover/openapi-slurm-24-05/openapi"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
